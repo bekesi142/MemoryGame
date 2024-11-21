@@ -1,0 +1,25 @@
+﻿<Window x:Class="MemoryGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Memória Játék" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF78C56D"/>
+                <GradientStop Color="#FFC0C137" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <!-- Játék időzítő -->
+        <TextBlock Name="TimerText" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="18"/>
+
+        <!-- Kártyák grid -->
+        <UniformGrid Name="CardGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Rows="4" Columns="4"/>
+
+        <!-- Vissza a kezdőképernyőre gomb (opcionális) -->
+        <Button Name="BackButton" Content="Vissza a Kezdőképernyőre" Click="BackButton_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,40" Width="200" Height="40">
+            <Button.Background>
+                <ImageBrush ImageSource="/aoto.jpg"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
